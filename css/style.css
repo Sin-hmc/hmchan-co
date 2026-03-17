@@ -370,7 +370,7 @@ body { top: 0 !important; }
   background-size: cover;
   background-position: center 60%;
   transform: scale(1.05);
-  transition: transform 8s ease;
+  transition: transform 0.1s linear;
 }
 
 .hero-bg::after {
