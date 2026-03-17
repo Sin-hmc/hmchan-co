@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms & Disclaimer — H.M. Chan & Co.</title>
-  <link rel="stylesheet" href="css/style.css?v=20260317k" />
+  <link rel="stylesheet" href="css/style.css?v=20260317l" />
   <link rel="stylesheet" href="css/reveal.css" />
 </head>
 <body>
@@ -22,6 +22,18 @@
       <li><a href="/hmchan-co/careers.html">Careers</a></li>
       <li><a href="/hmchan-co/contact.html" class="nav-contact-btn">Contact Us</a></li>
     </ul>
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-current" id="langBtn" aria-haspopup="true" aria-expanded="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span id="langLabel">EN</span>
+        <svg class="lang-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <ul class="lang-dropdown" id="langDropdown" role="menu">
+        <li role="menuitem" data-lang="en" data-label="EN">English</li>
+        <li role="menuitem" data-lang="zh-TW" data-label="繁中">繁體中文</li>
+        <li role="menuitem" data-lang="zh-CN" data-label="简中">简体中文</li>
+      </ul>
+    </div>
     <button class="nav-toggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
