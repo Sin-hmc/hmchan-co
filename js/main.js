@@ -9,41 +9,15 @@ function hmcInit() {
   const isHeroPage = !!document.getElementById('hero'); // only homepage has a full hero
 
   if (navbar) {
-    const updateLogo = () => {
-      const logoWhite = document.getElementById('logo-white');
-      const logoBlue = document.getElementById('logo-blue');
-      // On hero page: show white logo when transparent, blue when scrolled
-      // On inner pages: always show blue logo
-      if (isHeroPage && navbar.classList.contains('transparent')) {
-        if (logoWhite) logoWhite.style.display = 'block';
-        if (logoBlue) logoBlue.style.display = 'none';
-      } else {
-        if (logoWhite) logoWhite.style.display = 'none';
-        if (logoBlue) logoBlue.style.display = 'block';
-      }
-    };
+    // Always show white nav bar — remove transparent mode entirely
+    navbar.classList.add('scrolled');
+    navbar.classList.remove('transparent');
 
-    const onScroll = () => {
-      // On homepage: transparent over hero, then scrolled (dark)
-      // On inner pages: always scrolled (dark) since page-hero is dark navy
-      if (isHeroPage) {
-        const scrolled = window.scrollY > 60;
-        if (scrolled) {
-          navbar.classList.add('scrolled');
-          navbar.classList.remove('transparent');
-        } else {
-          navbar.classList.remove('scrolled');
-          navbar.classList.add('transparent');
-        }
-      } else {
-        // Inner pages: always dark navy navbar
-        navbar.classList.add('scrolled');
-        navbar.classList.remove('transparent');
-      }
-      updateLogo();
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+    // Always show blue logo
+    const logoWhite = document.getElementById('logo-white');
+    const logoBlue = document.getElementById('logo-blue');
+    if (logoWhite) logoWhite.style.display = 'none';
+    if (logoBlue) logoBlue.style.display = 'block';
   }
 
   /* --- Mobile nav toggle --- */
