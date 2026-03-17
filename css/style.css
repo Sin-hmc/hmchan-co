@@ -451,6 +451,18 @@ body { top: 0 !important; }
 #why-us {
   background: var(--primary);
   padding: 70px 0;
+  position: relative;
+  overflow: hidden;
+}
+#why-us::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/hero-hk-skyline.jpg');
+  background-size: cover;
+  background-position: center 60%;
+  opacity: 0.08;
+  pointer-events: none;
 }
 
 .why-us-grid {
@@ -834,15 +846,15 @@ body { top: 0 !important; }
   position: relative;
   overflow: hidden;
 }
-
 #cta-banner::before {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -10%;
-  width: 50%;
-  height: 200%;
-  background: radial-gradient(ellipse, rgba(192,0,26,0.12) 0%, transparent 70%);
+  inset: 0;
+  background-image: url('../assets/hero-hk-skyline.jpg');
+  background-size: cover;
+  background-position: center 60%;
+  opacity: 0.08;
+  pointer-events: none;
 }
 
 #cta-banner h2 { color: var(--white); margin-bottom: 1rem; }
@@ -855,11 +867,25 @@ body { top: 0 !important; }
   background: #0c1238;
   color: rgba(255,255,255,0.6);
   padding: 70px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+#footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/hero-hk-skyline.jpg');
+  background-size: cover;
+  background-position: center 60%;
+  opacity: 0.06;
+  pointer-events: none;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  position: relative;
+  z-index: 1;
   gap: 3rem;
   padding-bottom: 50px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
