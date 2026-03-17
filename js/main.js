@@ -131,9 +131,5 @@ function hmcInit() {
 
 }
 
-// Run immediately if DOM is ready, otherwise wait for DOMContentLoaded
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', hmcInit);
-} else {
-  hmcInit();
-}
+// NOTE: hmcInit() is called by components.js AFTER nav/footer are injected.
+// This prevents the race condition where #navbar doesn't exist yet.
