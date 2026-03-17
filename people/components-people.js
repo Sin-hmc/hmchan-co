@@ -83,11 +83,12 @@ const FOOTER_HTML = `
 </footer>
 `;
 
-// Inject nav and footer
+// Inject nav and footer, then run main init
 document.addEventListener('DOMContentLoaded', () => {
   const navEl = document.getElementById('nav-placeholder');
   if (navEl) navEl.outerHTML = NAV_HTML;
-
   const footerEl = document.getElementById('footer-placeholder');
   if (footerEl) footerEl.outerHTML = FOOTER_HTML;
+  // Trigger main init after injection (fixes reveal animation)
+  if (typeof hmcInit === 'function') hmcInit();
 });

@@ -1525,9 +1525,9 @@ body { top: 0 !important; }
   opacity: 0.30;
 }
 .page-hero-people::after {
-  background-image: url('../assets/office-boardroom.jpg');
-  background-position: center 30%;
-  opacity: 0.35;
+  background-image: url('../assets/office-trophies-shelf.jpg');
+  background-position: center 40%;
+  opacity: 0.40;
 }
 .page-hero-news::after {
   background-image: url('../assets/office-boardroom.jpg');
