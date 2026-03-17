@@ -1,0 +1,22 @@
+/* ============================================================
+   Scroll Reveal Animations — Fast & Snappy
+   ============================================================ */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children — very short delays */
+[data-reveal]:nth-child(2) { transition-delay: 0.03s; }
+[data-reveal]:nth-child(3) { transition-delay: 0.06s; }
+[data-reveal]:nth-child(4) { transition-delay: 0.09s; }
+[data-reveal]:nth-child(5) { transition-delay: 0.12s; }
+[data-reveal]:nth-child(6) { transition-delay: 0.15s; }
+[data-reveal]:nth-child(7) { transition-delay: 0.18s; }

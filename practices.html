@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practices &amp; Sectors — H.M. Chan &amp; Co.</title>
+  <meta name="description" content="H.M. Chan & Co. advises on capital markets, M&A, private equity, investment funds, wealth management, regulation & compliance, general corporate, and China practice." />
+  <link rel="stylesheet" href="css/style.css?v=20260317b" />
+  <link rel="stylesheet" href="css/award.css" />
+  <link rel="stylesheet" href="css/reveal.css" />
+  <style>
+    /* ── Shihui-style card grid ── */
+    .expertise-section { padding: 80px 0; }
+    .expertise-section:nth-child(even) { background: var(--off-white); }
+
+    .expertise-section-header {
+      margin-bottom: 50px;
+    }
+    .expertise-section-header h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .expertise-section-header h2::before {
+      content: '—';
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1px solid var(--light-grey);
+    }
+
+    .expertise-card {
+      padding: 36px 32px;
+      border-right: 1px solid var(--light-grey);
+      border-bottom: 1px solid var(--light-grey);
+      background: var(--white);
+      position: relative;
+      transition: background 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .expertise-card:hover {
+      background: #fafbff;
+      box-shadow: inset 0 0 0 2px var(--primary);
+      z-index: 1;
+    }
+    .expertise-card:nth-child(3n) { border-right: none; }
+
+    .expertise-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    .expertise-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+      flex: 1;
+      padding-right: 1rem;
+    }
+    .expertise-card-arrow {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.3s;
+    }
+    .expertise-card:hover .expertise-card-arrow { background: var(--accent); }
+    .expertise-card-arrow svg {
+      width: 14px;
+      height: 14px;
+      stroke: white;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .expertise-card p {
+      font-size: 0.88rem;
+      color: #666;
+      line-height: 1.75;
+      margin-bottom: 0;
+      flex: 1;
+    }
+    .expertise-card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ── Sectors — TITUS icon style ── */
+    .sectors-section { padding: 80px 0; background: var(--white); }
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .sector-card {
+      border: 1.5px solid var(--light-grey);
+      padding: 44px 32px;
+      text-align: center;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+      background: var(--white);
+    }
+    .sector-card:hover {
+      border-color: var(--primary);
+      box-shadow: 0 12px 40px rgba(20,27,77,0.1);
+      transform: translateY(-4px);
+    }
+    .sector-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 1.5rem;
+    }
+    .sector-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: var(--primary);
+      stroke-width: 1.4;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .sector-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.85rem;
+    }
+    .sector-card p {
+      font-size: 0.88rem;
+      color: #666;
+      line-height: 1.75;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 900px) {
+      .expertise-grid { grid-template-columns: repeat(2, 1fr); }
+      .expertise-card:nth-child(3n) { border-right: 1px solid var(--light-grey); }
+      .expertise-card:nth-child(2n) { border-right: none; }
+      .sectors-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .expertise-grid { grid-template-columns: 1fr; }
+      .expertise-card { border-right: none !important; }
+      .sectors-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="page-practices">
+  <div id="nav-placeholder"></div>
+
+  <section class="page-hero page-hero-practices">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Practices &amp; Sectors</span></div>
+      <div class="page-hero-content">
+        <span class="section-label">What We Do</span>
+        <h1>Practices &amp; Sectors</h1>
+        <p>Combining legal expertise and deep industry knowledge, we aim to bring fresh insights and deliver commercial solutions to our clients. By shaping the conversation in our sectors, we enable our clients to unlock growth, protect innovation and accelerate ambition.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRACTICES ===== -->
+  <section class="expertise-section">
+    <div class="container">
+      <div class="expertise-section-header" data-reveal>
+        <h2>Practices</h2>
+      </div>
+      <div class="expertise-grid">
+
+        <div class="expertise-card" data-reveal id="capital-markets">
+          <div class="expertise-card-header">
+            <h3>Capital Markets</h3>
+            <div class="expertise-card-arrow">
+              <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+          <p>Our capital markets practice advises issuers, underwriters, and investors on a full spectrum of equity and debt capital markets transactions in Hong Kong and internationally, including IPOs on HKEX and NASDAQ, secondary listings, rights issues, placings, and debt financing. We have worked with major investment banks including UBS, Goldman Sachs, BNP Paribas, Merrill Lynch, Deutsche Bank, and Citigroup.</p>
+        </div>
+
+        <div class="expertise-card" data-reveal id="ma">
+          <div class="expertise-card-header">
+            <h3>Mergers &amp; Acquisitions</h3>
+            <div class="expertise-card-arrow">
+              <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+          <p>Our M&amp;A practice provides comprehensive advisory services on public and private mergers, acquisitions, disposals, and joint ventures across Asia and internationally. We have advised on landmark transactions including JD.com's acquisition of Kai Bo Food Supermarket — recognised as a China Deals of the Year 2025 — and numerous other high-profile cross-border deals.</p>
+        </div>
+
+        <div class="expertise-card" data-reveal id="private-equity">
+          <div class="expertise-card-header">
+            <h3>Private Equity</h3>
+            <div class="expertise-card-arrow">
+              <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+          <p>Our private equity practice advises PE sponsors, VC funds, and portfolio companies on the full investment lifecycle — from fund formation and initial investment through to exit. We have advised on investments ranging from seed-stage venture capital to large-scale private equity transactions, including pre-IPO investments in China Evergrande Group and I-Mab.</p>
+        </div>
+
+        <div class="expertise-card" data-reveal id="investment-funds">
+          <div class="expertise-card-header">
+            <h3>Investment Funds</h3>
+            <div class="expertise-card-arrow">
+              <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+          <p>Our investment funds practice advises on the structuring and establishment of a wide range of investment vehicles, including venture capital funds, private equity funds, hedge funds, and family office structures. We assist fund managers and investors with all aspects of fund formation, from drafting constitutional documents to advising on regulatory requirements.</p>
+        </div>
+
+        <div class="expertise-card" data-reveal id="wealth-management">
+          <div class="expertise-card-header">
+            <h3>Wealth Management</h3>
+            <div class="expertise-card-arrow">
+              <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+          <p>We provide bespoke legal solutions for family offices, high-net-worth individuals, and wealth management institutions across Asia. Our private wealth practice covers the establishment and structuring of family offices, estate planning, trust structures, and cross-border wealth management arrangements.</p>
+        </div>
+
+        <div class="expertise-card" data-reveal id="regulation">
+          <div class="expertise-card-header">
+            <h3>Regulation &amp; Compliance</h3>
+            <div class="expertise-card-arrow">
+              <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+          <p>Our regulation and compliance practice assists listed companies, financial institutions, and other regulated entities with their ongoing regulatory obligations in Hong Kong. We have advised major listed companies including Alibaba Health (HKEX: 0241), Alibaba Group (HKEX: 9988), and China Wangwang (HKEX: 0151) on their post-listing regulatory and compliance matters.</p>
+        </div>
+
+        <div class="expertise-card" data-reveal id="general-corporate">
+          <div class="expertise-card-header">
+            <h3>General Corporate</h3>
+            <div class="expertise-card-arrow">
+              <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+          <p>Our general corporate practice advises clients on a broad range of day-to-day corporate matters, from company formation and corporate governance to commercial contracts and joint ventures. We serve as trusted advisors to our clients, providing practical and commercially-focused legal advice that helps them manage and grow their businesses in Hong Kong and across Asia.</p>
+        </div>
+
+        <div class="expertise-card" data-reveal id="china-practice">
+          <div class="expertise-card-header">
+            <h3>China Practice</h3>
+            <div class="expertise-card-arrow">
+              <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+          <p>Our China practice advises on cross-border transactions involving Chinese parties, including outbound investments, inbound acquisitions, and Hong Kong listings by Mainland Chinese companies. With deep knowledge of both Hong Kong and PRC regulatory frameworks, and Mandarin-speaking lawyers on our team, we bridge the gap between Chinese and international business.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTORS ===== -->
+  <section class="sectors-section">
+    <div class="container">
+      <div class="expertise-section-header" data-reveal>
+        <h2>Sectors</h2>
+      </div>
+      <div class="sectors-grid">
+
+        <div class="sector-card" data-reveal>
+          <div class="sector-icon">
+            <svg viewBox="0 0 64 64"><rect x="8" y="24" width="48" height="32" rx="3"/><path d="M22 24V18a10 10 0 0 1 20 0v6"/><line x1="32" y1="36" x2="32" y2="44"/><circle cx="32" cy="34" r="4"/></svg>
+          </div>
+          <h3>Financial Services</h3>
+          <p>Advising banks, asset managers, insurers, and fintech companies on regulatory matters, M&amp;A, capital raising, and fund structuring across Asia.</p>
+        </div>
+
+        <div class="sector-card" data-reveal>
+          <div class="sector-icon">
+            <svg viewBox="0 0 64 64"><rect x="10" y="30" width="14" height="26"/><rect x="25" y="22" width="14" height="34"/><rect x="40" y="14" width="14" height="42"/><line x1="6" y1="56" x2="58" y2="56"/><polyline points="10,30 25,22 40,14 54,10"/></svg>
+          </div>
+          <h3>Technology &amp; Innovation</h3>
+          <p>Supporting PE/VC-backed technology companies, digital businesses, and startups from seed funding through to IPO and beyond.</p>
+        </div>
+
+        <div class="sector-card" data-reveal>
+          <div class="sector-icon">
+            <svg viewBox="0 0 64 64"><path d="M8 56V30L32 10l24 20v26H42V42H22v14z"/></svg>
+          </div>
+          <h3>Real Estate &amp; Infrastructure</h3>
+          <p>Acting for property developers, infrastructure funds, and institutional investors on acquisitions, joint ventures, and financing across the region.</p>
+        </div>
+
+        <div class="sector-card" data-reveal>
+          <div class="sector-icon">
+            <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><line x1="32" y1="10" x2="32" y2="54"/><line x1="10" y1="32" x2="54" y2="32"/><path d="M32 10c8 6 13 13 13 22s-5 16-13 22M32 10c-8 6-13 13-13 22s5 16 13 22"/></svg>
+          </div>
+          <h3>Consumer &amp; Retail</h3>
+          <p>Advising on M&amp;A, investments, and regulatory matters for consumer brands and retailers — including JD.com's landmark acquisition of Kai Bo Food Supermarket.</p>
+        </div>
+
+        <div class="sector-card" data-reveal>
+          <div class="sector-icon">
+            <svg viewBox="0 0 64 64"><path d="M32 8c-9 0-18 7-18 18 0 13 18 34 18 34s18-21 18-34C50 15 41 8 32 8z"/><circle cx="32" cy="26" r="7"/></svg>
+          </div>
+          <h3>Healthcare &amp; Life Sciences</h3>
+          <p>Providing legal support for biotech, pharmaceutical, and healthcare companies on investments, listings, licensing, and regulatory compliance.</p>
+        </div>
+
+        <div class="sector-card" data-reveal>
+          <div class="sector-icon">
+            <svg viewBox="0 0 64 64"><polygon points="32,6 38,24 58,24 42,36 48,54 32,42 16,54 22,36 6,24 26,24"/></svg>
+          </div>
+          <h3>Energy &amp; Natural Resources</h3>
+          <p>Supporting Chinese and international companies on cross-border energy transactions, outbound investments, and Belt &amp; Road related matters.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section id="cta-banner">
+    <div class="container" data-reveal>
+      <h2>Discuss Your Legal Needs</h2>
+      <p>Our team is ready to advise on your next transaction or regulatory matter. Get in touch to find out how we can help.</p>
+      <a href="contact.html" class="btn btn-primary">Discuss Your Needs</a>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — H.M. Chan &amp; Co.</title>
+  <meta name="description" content="H.M. Chan & Co. is a Hong Kong corporate law firm established in 2015 by Mark Chan. Recognised as Transactional Boutique Law Firm of the Year by Asian Legal Business." />
+  <link rel="stylesheet" href="css/style.css?v=20260317b" />
+  <link rel="stylesheet" href="css/award.css" />
+  <link rel="stylesheet" href="css/reveal.css" />
+  <style>
+    /* Stats strip */
+    .about-stats-strip { background: var(--accent); padding: 50px 0; }
+    .about-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; text-align: center; }
+    .about-stat-item { padding: 0 2rem; border-right: 1px solid rgba(255,255,255,0.2); }
+    .about-stat-item:last-child { border-right: none; }
+    .about-stat-item .num { font-family: 'Lora', serif; font-size: 2.8rem; font-weight: 700; color: var(--white); display: block; line-height: 1; }
+    .about-stat-item .lbl { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.8); display: block; margin-top: 0.5rem; }
+
+    /* Office photos */
+    .office-photos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+
+    /* Quote block */
+    .founder-quote {
+      background: var(--primary);
+      padding: 60px;
+      margin-top: 3rem;
+      position: relative;
+    }
+    .founder-quote::before {
+      content: '\201C';
+      font-family: 'Lora', serif;
+      font-size: 8rem;
+      color: rgba(255,255,255,0.08);
+      position: absolute;
+      top: -10px;
+      left: 30px;
+      line-height: 1;
+    }
+    .founder-quote p {
+      font-family: 'Lora', serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+      position: relative;
+      z-index: 1;
+    }
+    .founder-quote cite {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* Awards section — with ceremony photo background */
+    .awards-section {
+      padding: 100px 0;
+      background: var(--off-white);
+      position: relative;
+      overflow: hidden;
+    }
+    .awards-section::before {
+      content: none;
+    }
+    .awards-section > * { position: relative; z-index: 1; }
+    .awards-section .container { position: relative; z-index: 1; }
+    .awards-section-header { text-align: center; margin-bottom: 70px; }
+    .awards-section-header h2 { color: var(--primary); }
+    .awards-section-header p { color: #666; max-width: 620px; margin: 1rem auto 0; font-size: 1rem; }
+
+    /* Award logo grid — Shihui style */
+    .award-pub-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border: 1px solid var(--light-grey);
+      margin-bottom: 3rem;
+    }
+    .award-pub-item {
+      padding: 40px 30px;
+      border-right: 1px solid var(--light-grey);
+      border-bottom: 1px solid var(--light-grey);
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .award-pub-item:hover { background: var(--white); }
+    .award-pub-item:nth-child(4n) { border-right: none; }
+    .award-pub-item img {
+      height: 50px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      margin: 0 auto 1rem;
+      filter: none;
+      opacity: 1;
+      transition: none;
+    }
+    .award-pub-item:hover img { filter: none; opacity: 1; }
+    .award-pub-item .pub-name {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .award-pub-item .award-list {
+      font-size: 0.82rem;
+      color: #666;
+      line-height: 1.6;
+    }
+    .award-pub-item .award-list li {
+      padding: 0.2rem 0;
+      border-top: 1px solid var(--light-grey);
+      margin-top: 0.3rem;
+    }
+    .award-pub-item .award-list li:first-child { border-top: none; margin-top: 0; }
+
+    /* Highlight box */
+    .award-highlight {
+      background: var(--primary);
+      padding: 36px 44px;
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    .award-highlight-badge {
+      flex-shrink: 0;
+      width: 100px;
+      height: 100px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .award-highlight-badge img { width: 100%; height: 100%; object-fit: contain; }
+    .award-highlight-text .label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .award-highlight-text p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+    .award-highlight-text strong { color: var(--white); }
+
+    .award-note {
+      font-size: 0.75rem;
+      color: #aaa;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .about-stats-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+      .about-stat-item { border-right: none; }
+      .office-photos-grid { grid-template-columns: 1fr; }
+      .award-pub-grid { grid-template-columns: repeat(2, 1fr); }
+      .award-pub-item:nth-child(4n) { border-right: 1px solid var(--light-grey); }
+      .award-pub-item:nth-child(2n) { border-right: none; }
+      .award-highlight { flex-direction: column; gap: 1.5rem; }
+    }
+    @media (max-width: 560px) {
+      .award-pub-grid { grid-template-columns: 1fr; }
+      .award-pub-item { border-right: none !important; }
+      .founder-quote { padding: 40px 30px; }
+    }
+  </style>
+</head>
+<body class="page-about">
+  <div id="nav-placeholder"></div>
+  <section class="page-hero page-hero-about">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>About Us</span></div>
+      <div class="page-hero-content">
+        <span class="section-label">Who We Are</span>
+        <h1>About H.M. Chan &amp; Co.</h1>
+        <p>A boutique corporate law firm built on deep expertise, commercial acumen, and an unwavering commitment to client success.</p>
+      </div>
+    </div>
+  </section>
+  <style>
+    .page-hero-about::after {
+      background: url('assets/awards-ceremony.jpg') center 30% / cover no-repeat;
+      opacity: 0.15;
+    }
+  </style>
+
+  <!-- OUR FIRM -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="about-intro-grid">
+        <div class="about-intro-text" data-reveal>
+          <span class="section-label">Our Firm</span>
+          <h2>Established in 2015. Built on Experience.</h2>
+          <p>H.M. Chan &amp; Co. is a Hong Kong corporate law firm established by professionals with many years of extensive experience in handling cross-border international transactions. Our objective is to add value by drawing on our practical experience to foresee and minimise any potential issues which may arise.</p>
+          <p>We specialise in helping clients at all stages of the business life cycle — from development and seed funding of startups via private equity or venture capital investment, to growth and restructuring through public or private M&amp;As, and fund raising through IPOs, secondary listings or equity or debt financing. We also assist listed companies in their post-listing regulatory and compliance matters, restructurings and investments.</p>
+          <p>The firm was set up by Mark Chan as its founder and managing partner in 2015, and initially operated in association with Taylor Wessing from 2016 to 2021 before formally becoming Taylor Wessing in 2021. During this time, it was recognised on numerous occasions as the <em>"Transactional Boutique Law Firm of the Year"</em> in Hong Kong by Asian Legal Business.</p>
+
+          <div class="founder-quote" data-reveal>
+            <p>"We are excited to re-launch H.M. Chan &amp; Co. and look forward to strengthening our presence in Hong Kong and across Asia."</p>
+            <cite>— Mark Chan, Founder &amp; Managing Partner</cite>
+          </div>
+        </div>
+        <div class="about-intro-image" data-reveal>
+          <img src="assets/about-hk-ifc.jpg" alt="Hong Kong Central Business District — H.M. Chan &amp; Co. is located at 8 Queen's Road Central" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="about-stats-strip">
+    <div class="container">
+      <div class="about-stats-grid">
+        <div class="about-stat-item" data-reveal><span class="num">10+</span><span class="lbl">Years Established</span></div>
+        <div class="about-stat-item" data-reveal><span class="num">50+</span><span class="lbl">IPOs &amp; Listings Advised</span></div>
+        <div class="about-stat-item" data-reveal><span class="num">3</span><span class="lbl">Jurisdictions of Practice</span></div>
+        <div class="about-stat-item" data-reveal><span class="num">15+</span><span class="lbl">Industry Awards</span></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- WHAT SETS US APART -->
+  <section class="section-pad">
+    <div class="container">
+      <div style="text-align:center; max-width:600px; margin:0 auto 60px;" data-reveal>
+        <span class="section-label">Our Principles</span>
+        <h2>What Sets Us Apart</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-item" data-reveal>
+          <h4>Commercial Focus</h4>
+          <p>We combine deep legal expertise with sharp commercial and financial acumen. We understand that legal advice must be practical and aligned with our clients' business objectives — not just technically correct.</p>
+        </div>
+        <div class="value-item" data-reveal>
+          <h4>Partner-Led Service</h4>
+          <p>We ensure that every transaction has partner oversight and involvement at all times. Our clients benefit from direct access to our most experienced lawyers throughout the entire deal process.</p>
+        </div>
+        <div class="value-item" data-reveal>
+          <h4>Cross-Border Expertise</h4>
+          <p>With qualifications in Hong Kong, Singapore, and England &amp; Wales, and over a decade of collaboration with leading international and Chinese law firms, we are uniquely positioned to advise on complex cross-border transactions.</p>
+        </div>
+        <div class="value-item" data-reveal>
+          <h4>Proactive Deal Management</h4>
+          <p>As lead counsel, we proactively drive deals and coordinate with advisors across multiple jurisdictions, ensuring a seamless and efficient process while minimising the workload on our clients' management teams.</p>
+        </div>
+        <div class="value-item" data-reveal>
+          <h4>Tailored Solutions</h4>
+          <p>We are highly valued by our clients for understanding and customising our services and advice for their unique business needs, supporting them through all stages of their business life cycle.</p>
+        </div>
+        <div class="value-item" data-reveal>
+          <h4>Multilingual Capability</h4>
+          <p>Our team is fluent in English, Mandarin, and Cantonese, enabling us to bridge cultural and linguistic gaps in cross-border transactions involving Mainland Chinese, Hong Kong, and international parties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS & RANKINGS — Shihui style -->
+  <section class="awards-section">
+    <div class="container">
+      <div class="awards-section-header" data-reveal>
+        <span class="section-label">Recognition</span>
+        <h2>Awards &amp; Rankings</h2>
+        <p>Since our establishment in 2015, H.M. Chan &amp; Co. has been consistently recognised by the world's leading legal publications for excellence in corporate law, capital markets, and private equity.</p>
+      </div>
+
+      <!-- 2025 Highlight -->
+      <div class="award-highlight" data-reveal>
+        <div class="award-highlight-badge">
+          <img src="assets/logo-cblj.png" alt="China Business Law Journal" />
+        </div>
+        <div class="award-highlight-text">
+          <span class="label">Latest Recognition — 2025</span>
+          <p><strong>China Business Law Journal — China Deals of the Year 2025:</strong> H.M. Chan &amp; Co. was recognised as Hong Kong legal counsel in the landmark acquisition of Kai Bo Food Supermarket by JD.com, Inc., one of China's largest e-commerce companies.</p>
+        </div>
+      </div>
+
+      <!-- Award publication logos grid -->
+      <div class="award-pub-grid" data-reveal>
+
+        <div class="award-pub-item">
+          <img src="assets/logo-alb.png" alt="Asian Legal Business" style="height:52px;width:auto;max-width:220px;" />
+          <span class="pub-name">Asian Legal Business</span>
+          <ul class="award-list">
+            <li>Transactional Boutique Law Firm of the Year — Winner (2018, 2022, 2023)</li>
+            <li>Transactional Boutique Law Firm of the Year — Finalist (2017, 2019, 2024, 2025)</li>
+            <li>Employer of Choice — Winner (2020, 2023)</li>
+            <li>ALB Asia M&amp;A Rankings — Notable HK Law Firm (2016–2024)</li>
+            <li>ALB Asia Top 50 Firms (International) (2018–2024)</li>
+          </ul>
+        </div>
+
+        <div class="award-pub-item">
+          <img src="assets/logo-iflr1000.png" alt="IFLR1000" />
+          <span class="pub-name">IFLR1000</span>
+          <ul class="award-list">
+            <li>Tier 4 — Capital Markets: Equity &amp; Private Equity (2019–2025)</li>
+            <li>Highly Regarded — Mark Chan, Capital Markets: Equity (2019–2025)</li>
+            <li>Rising Star Lawyer — Avis Lau, Capital Markets: Equity (2021–2025)</li>
+          </ul>
+        </div>
+
+        <div class="award-pub-item">
+          <img src="assets/logo-asialaw.png" alt="asialaw" />
+          <span class="pub-name">asialaw</span>
+          <ul class="award-list">
+            <li>Recommended — Private Equity (2018–2024)</li>
+            <li>Notable — Capital Markets, Corporate &amp; M&amp;A (2018–2024)</li>
+            <li>Notable Practitioner — Mark Chan (2020–2024)</li>
+          </ul>
+        </div>
+
+        <div class="award-pub-item">
+          <img src="assets/logo-tr-standout.png" alt="Thomson Reuters Stand-out Lawyer" style="max-height:80px;max-width:260px;" />
+          <span class="pub-name">Thomson Reuters</span>
+          <ul class="award-list">
+            <li>Stand-out Lawyer — Mark Chan (2022, 2025)</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="award-note">* Awards from 2016 to November 2025 were received under the firm's association with Taylor Wessing.</p>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

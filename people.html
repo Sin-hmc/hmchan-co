@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our People — H.M. Chan &amp; Co.</title>
+  <meta name="description" content="Meet the team at H.M. Chan &amp; Co. — Hong Kong qualified lawyers with deep expertise in capital markets, M&amp;A, and private equity." />
+  <link rel="stylesheet" href="css/style.css?v=20260317b" />
+  <link rel="stylesheet" href="css/award.css" />
+  <link rel="stylesheet" href="css/reveal.css" />
+  <style>
+    /* ===== PEOPLE GRID ===== */
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .person-card {
+      background: var(--white);
+      box-shadow: 0 4px 30px rgba(20,27,77,0.07);
+      overflow: hidden;
+      border-top: 3px solid var(--primary);
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .person-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 10px 40px rgba(20,27,77,0.13);
+      transform: translateY(-4px);
+    }
+
+    .person-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .person-card .person-placeholder {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(160deg, #1a2260 0%, #0d1238 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .person-card .person-placeholder svg {
+      width: 64px;
+      height: 64px;
+      stroke: rgba(255,255,255,0.2);
+    }
+    .person-card .person-placeholder span {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .person-card .person-info {
+      padding: 22px 26px;
+      background: var(--primary);
+    }
+    .person-card .person-info h4 {
+      color: var(--white);
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .person-card .person-info .person-role {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+    }
+
+    /* Joining soon badge */
+    .joining-badge {
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    /* Section tier labels */
+    .team-tier-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.75rem;
+      margin: 3.5rem 0 2rem;
+      display: block;
+    }
+    .team-tier-label:first-of-type { margin-top: 0; }
+
+    @media (max-width: 600px) {
+      .people-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    }
+    @media (max-width: 400px) {
+      .people-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="page-people">
+
+  <div id="nav-placeholder"></div>
+
+  <section class="page-hero page-hero-people">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Our People</span></div>
+      <div class="page-hero-content">
+        <span class="section-label">The Team</span>
+        <h1>Our People</h1>
+        <p>Our team is comprised of Hong Kong qualified lawyers who understand the commercial and financial context and can therefore better help clients achieve their goals in a timely manner.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm" style="background:var(--off-white);">
+    <div class="container">
+      <div data-reveal>
+        <p style="color:#555; line-height:1.9; max-width:800px;">As the lead counsel of various deals, we proactively drive deals and coordinate with legal advisors from various jurisdictions and other professional parties to ensure a seamless and efficient process. By collaborating closely with our clients' key management, we safeguard their interests while minimising their workload by serving as their key point of contact.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+
+      <!-- ===== PARTNERS ===== -->
+      <span class="team-tier-label">Partners</span>
+
+      <div class="people-grid">
+
+        <!-- Mark Chan -->
+        <a href="people/mark-chan.html" class="person-card" data-reveal style="text-decoration:none;display:block;">
+          <img src="assets/mark-chan-card.jpg" alt="Mark Chan" />
+          <div class="person-info">
+            <h4>Mark Chan</h4>
+            <span class="person-role">Founder &amp; Managing Partner</span>
+          </div>
+        </a>
+
+        <!-- Avis Lau -->
+        <a href="people/avis-lau.html" class="person-card" data-reveal style="text-decoration:none;display:block;">
+          <img src="assets/avis-lau-card.jpg" alt="Avis Lau" />
+          <div class="person-info">
+            <h4>Avis Lau</h4>
+            <span class="person-role">Partner</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- ===== LEGAL MANAGERS & COUNSEL ===== -->
+      <span class="team-tier-label">Legal Managers &amp; Counsel</span>
+
+      <div class="people-grid">
+
+        <!-- Steven Qin -->
+        <a href="people/steven-qin.html" class="person-card" data-reveal style="text-decoration:none;display:block;">
+          <img src="assets/steven-qin-card.jpg" alt="Steven Qin" />
+          <div class="person-info">
+            <h4>Steven Qin</h4>
+            <span class="person-role">Counsel</span>
+          </div>
+        </a>
+
+        <!-- Kevin Wong -->
+        <a href="people/kevin-wong.html" class="person-card" data-reveal style="text-decoration:none;display:block;">
+          <img src="assets/kevin-wong-card.jpg" alt="Kevin Wong" />
+          <div class="person-info">
+            <h4>Kevin Wong</h4>
+            <span class="person-role">Legal Manager</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- ===== ASSOCIATES ===== -->
+      <span class="team-tier-label">Associates</span>
+
+      <div class="people-grid">
+
+        <!-- Cecil Hoo -->
+        <a href="people/cecil-hoo.html" class="person-card" data-reveal style="text-decoration:none;display:block;">
+          <img src="assets/cecil-hoo-card.jpg" alt="Cecil Hoo" />
+          <div class="person-info">
+            <h4>Cecil Hoo</h4>
+            <span class="person-role">Associate</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- ===== TRAINEE SOLICITORS ===== -->
+      <span class="team-tier-label">Trainee Solicitors</span>
+
+      <div class="people-grid">
+
+
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="cta-banner">
+    <div class="container" data-reveal>
+      <h2>Get in Touch With Our Team</h2>
+      <p>Our lawyers are ready to discuss your legal needs and how we can help you achieve your business objectives.</p>
+      <a href="contact.html" class="btn btn-primary">Reach Out to Us</a>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

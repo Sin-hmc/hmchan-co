@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News & Transactions — H.M. Chan & Co.</title>
+  <meta name="description" content="Latest news, transactions, and announcements from H.M. Chan & Co., a premier Hong Kong corporate law firm." />
+  <link rel="stylesheet" href="css/style.css?v=20260317b" />
+  <link rel="stylesheet" href="css/award.css" />
+  <link rel="stylesheet" href="css/reveal.css" />
+  <style>
+    /* Featured Award Article */
+    .award-article {
+      background: var(--primary);
+      color: var(--white);
+      padding: 70px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .award-article::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,35,66,0.04) 0%, rgba(10,35,66,0.08) 100%);
+    }
+    .award-article-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .award-article-img {
+      position: relative;
+    }
+    .award-article-img img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border: 3px solid rgba(192,0,26,0.5);
+    }
+    .award-ribbon {
+      position: absolute;
+      top: 20px;
+      left: -8px;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 8px 20px 8px 16px;
+      clip-path: polygon(0 0, 100% 0, 92% 50%, 100% 100%, 0 100%);
+    }
+    .award-article-text .section-label { color: rgba(255,255,255,0.75) !important; }
+    .award-article-text h2 { color: var(--white); font-size: 2rem; margin-bottom: 1rem; }
+    .award-article-text .date {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .award-article-text p { color: rgba(255,255,255,0.8); line-height: 1.85; margin-bottom: 1rem; }
+    .award-article-text p strong { color: var(--white); }
+    .award-article-text blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      background: rgba(255,255,255,0.05);
+      font-style: italic;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+    .award-article-text .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 0.5rem;
+      transition: color 0.3s;
+    }
+    .award-article-text .source-link:hover { color: var(--white); }
+
+    /* News filter tabs */
+    .news-filter {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      padding: 8px 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--light-grey);
+      background: var(--white);
+      color: #666;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+
+    @media (max-width: 900px) {
+      .award-article-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .award-article-img img { height: 260px; }
+    }
+  </style>
+</head>
+<body class="page-news">
+
+  <div id="nav-placeholder"></div>
+
+  <!-- Page Hero -->
+  <section class="page-hero page-hero-news">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>News</span>
+      </div>
+      <div class="page-hero-content">
+        <span class="section-label">Latest Updates</span>
+        <h1>News &amp; Transactions</h1>
+        <p>Stay up to date with H.M. Chan &amp; Co.'s latest transactions, awards, and announcements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED: CHINA DEALS OF THE YEAR AWARD ===== -->
+  <section class="award-article">
+    <div class="container">
+      <div class="award-article-grid">
+        <div class="award-article-img" data-reveal>
+          <img src="assets/award-banner.png" alt="China Deals of the Year 2025 — China Business Law Journal" style="object-position: center top;" />
+          <div class="award-ribbon">🏆 Featured Award</div>
+        </div>
+        <div class="award-article-text" data-reveal>
+          <span class="section-label">Recognition · M&amp;A</span>
+          <h2>China Deals of the Year 2025 — Cross-Border M&amp;A</h2>
+          <span class="date">Published: 4 March 2025 &nbsp;·&nbsp; China Business Law Journal</span>
+          <p>We are proud to announce that <strong>H.M. Chan &amp; Co.</strong> has been recognised by <em>China Business Law Journal</em> in its prestigious <strong>Deals of the Year 2025</strong> awards — one of the most respected legal accolades covering China's legal market.</p>
+          <p>The firm was selected for its role as <strong>Hong Kong legal counsel to JD.com</strong> in the acquisition of <strong>Kai Bo Food Supermarket</strong>, a landmark cross-border M&amp;A transaction. The deal involved Kai Bo's more than 90 stores, thousands of employees, and dozens of owned properties across Hong Kong.</p>
+          <blockquote>"H.M. Chan &amp; Co. (previously operating as Taylor Wessing) counselled JD on Hong Kong law." — China Business Law Journal, Deals of the Year 2025</blockquote>
+          <p>The transaction required navigating complex Hong Kong supermarket operation rules, labour compliance, and global supply chain customs and taxation considerations, adopting a structure that combined asset acquisition and equity acquisition.</p>
+          <p>This recognition reflects our team's commitment to delivering precise, commercially-focused legal advice on complex cross-border transactions.</p>
+          <a href="https://law.asia/china/china-deals-of-the-year-2025/" target="_blank" class="source-link">View full award listing on China Business Law Journal →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ALL NEWS ===== -->
+  <section class="section-pad">
+    <div class="container">
+      <div style="margin-bottom:2rem;" data-reveal>
+        <span class="section-label">All Transactions &amp; Announcements</span>
+        <h2>Recent Work</h2>
+      </div>
+
+      <div class="news-filter" data-reveal>
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Capital Markets</button>
+        <button class="filter-btn">M&amp;A</button>
+        <button class="filter-btn">Private Equity</button>
+        <button class="filter-btn">General Corporate</button>
+      </div>
+
+      <div class="news-page-grid">
+
+        <div class="news-page-card" data-reveal>
+          <div class="news-body">
+            <span class="news-tag">Capital Markets</span>
+            <h3>MasterBeef Group (NASDAQ: MB) — NASDAQ Listing</h3>
+            <p>We acted as legal counsel to MasterBeef Group, a renowned Hong Kong food and beverage provider specialising in Taiwanese hot pot and grill, on its listing on NASDAQ and subsequent post-listing regulatory and compliance matters.</p>
+            <a href="https://www.linkedin.com/company/hmchanco/" target="_blank" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="news-page-card" data-reveal>
+          <div class="news-body">
+            <span class="news-tag">Mergers &amp; Acquisitions</span>
+            <h3>iClick Interactive (NASDAQ: ICLK) — Disposal &amp; Merger with Amber DWM</h3>
+            <p>We acted as legal counsel to iClick Interactive Asia Group Limited on the disposal of its subsidiaries and its merger with Amber DWM Holding Limited, a digital wealth management group. The combined entity was renamed Amber International Holding Limited (NASDAQ: AMBR).</p>
+            <a href="https://www.linkedin.com/company/hmchanco/" target="_blank" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="news-page-card" data-reveal>
+          <div class="news-body">
+            <span class="news-tag">Private Equity</span>
+            <h3>Brizan Ventures II L.P. — Angel Investment in Matrice Limited</h3>
+            <p>We acted as legal counsel to Brizan Ventures II L.P. on its subscription of series angel preferred shares of Matrice Limited, a specialist in innovative acoustic metamaterial technology focused on audio and noise control electronic components.</p>
+            <a href="https://www.linkedin.com/company/hmchanco/" target="_blank" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="news-page-card" data-reveal>
+          <div class="news-body">
+            <span class="news-tag">Mergers &amp; Acquisitions</span>
+            <h3>Grit Ventures — Acquisition of the Integra Group</h3>
+            <p>We acted as legal counsel to Grit Ventures on its acquisition of the Integra Group, which primarily provides corporate secretarial and manpower services in China, including establishing the shareholding and investment structure and post-acquisition integration.</p>
+            <a href="https://www.linkedin.com/company/hmchanco/" target="_blank" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="news-page-card" data-reveal>
+          <div class="news-body">
+            <span class="news-tag">General Corporate</span>
+            <h3>The Women's Clinic Group — Investment in The O&amp;G Specialist Clinic</h3>
+            <p>We acted as legal counsel to The Women's Clinic Group on updating its investment terms for the acquisition of The O&amp;G Specialist Clinic, reflecting a revised payment schedule for the first cash consideration tranche of SGD 51 million.</p>
+            <a href="https://www.linkedin.com/company/hmchanco/" target="_blank" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="news-page-card" data-reveal>
+          <div class="news-body">
+            <span class="news-tag">Capital Markets</span>
+            <h3>BeLive Holdings — Nasdaq Public Filing</h3>
+            <p>We acted as legal counsel to BeLive Holdings, a Singapore-based video commerce platform, on its first public filing on Nasdaq, providing live commerce and shoppable short video solutions to international retail companies and e-commerce marketplaces.</p>
+            <a href="https://www.linkedin.com/company/hmchanco/" target="_blank" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="news-page-card" data-reveal>
+          <div class="news-body">
+            <span class="news-tag">Private Equity</span>
+            <h3>Laidlaw Scholars Ventures — VC Investment in Kodifly</h3>
+            <p>We acted as legal counsel to Laidlaw Scholars Ventures, a start-up investment fund, on its VC investment in Kodifly, a cutting-edge technology company specialising in lidar and camera fusion combined with advanced deep learning algorithms. LSV was the first external investor for Kodifly.</p>
+            <a href="https://www.linkedin.com/company/hmchanco/" target="_blank" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+        <div class="news-page-card" data-reveal>
+          <div class="news-body">
+            <span class="news-tag">Capital Markets</span>
+            <h3>JMC Capital — Pre-IPO Investment Round</h3>
+            <p>We acted as legal counsel to JMC Capital on its pre-IPO investment of approximately USD 5 million. JMC is a Hong Kong-based fully licensed financial service platform raising pre-IPO funds in preparation for a potential listing in Hong Kong.</p>
+            <a href="https://www.linkedin.com/company/hmchanco/" target="_blank" class="read-more">Read More →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLIENT LOGOS (MARQUEE) ===== -->
+  <section style="background:var(--off-white); padding:60px 0 50px;">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:40px;" data-reveal>
+        <span class="section-label">Selected Clients</span>
+        <h2 style="font-size:1.6rem;">Trusted by Leading Companies</h2>
+      </div>
+    </div>
+    <!-- Scrolling logo strip -->
+    <div class="clients-marquee-outer">
+      <div class="clients-marquee-track">
+        <!-- First set -->
+        <div class="clients-marquee-item"><img src="assets/client-jdcom.png" alt="JD.com" /></div>
+        <div class="clients-marquee-item"><img src="assets/client-sinotruk.jpg" alt="Sinotruk" /></div>
+        <div class="clients-marquee-item"><img src="assets/client-iclick.png" alt="iClick Interactive" /></div>
+        <div class="clients-marquee-item"><img src="assets/client-amber.png" alt="Amber International" /></div>
+        <div class="clients-marquee-item"><img src="assets/client-masterbeef.png" alt="MasterBeef Group" /></div>
+        <div class="clients-marquee-item"><img src="assets/client-belive.png" alt="BeLive Holdings" /></div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="clients-marquee-item"><img src="assets/client-jdcom.png" alt="JD.com" /></div>
+        <div class="clients-marquee-item"><img src="assets/client-sinotruk.jpg" alt="Sinotruk" /></div>
+        <div class="clients-marquee-item"><img src="assets/client-iclick.png" alt="iClick Interactive" /></div>
+        <div class="clients-marquee-item"><img src="assets/client-amber.png" alt="Amber International" /></div>
+        <div class="clients-marquee-item"><img src="assets/client-masterbeef.png" alt="MasterBeef Group" /></div>
+        <div class="clients-marquee-item"><img src="assets/client-belive.png" alt="BeLive Holdings" /></div>
+      </div>
+    </div>
+    <div class="container">
+      <p style="text-align:center; font-size:0.75rem; color:#999; margin-top:30px; font-style:italic;">Selected clients shown for illustrative purposes. Please treat all client names as confidential.</p>
+    </div>
+  </section>
+
+  <style>
+    .clients-marquee-outer {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+    .clients-marquee-outer::before,
+    .clients-marquee-outer::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 80px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .clients-marquee-outer::before {
+      left: 0;
+      background: linear-gradient(to right, var(--off-white), transparent);
+    }
+    .clients-marquee-outer::after {
+      right: 0;
+      background: linear-gradient(to left, var(--off-white), transparent);
+    }
+    .clients-marquee-track {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      width: max-content;
+      animation: marquee-scroll 28s linear infinite;
+      padding: 10px 0;
+    }
+    .clients-marquee-track:hover {
+      animation-play-state: paused;
+    }
+    .clients-marquee-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .clients-marquee-item img {
+      height: 52px;
+      max-width: 160px;
+      width: auto;
+      object-fit: contain;
+      filter: none;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+    .clients-marquee-item img:hover {
+      opacity: 0.8;
+    }
+    @keyframes marquee-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+
+  <section id="cta-banner">
+    <div class="container" data-reveal>
+      <h2>Work With an Award-Winning Team</h2>
+      <p>Our team of experienced Hong Kong qualified lawyers is ready to advise you on your next transaction.</p>
+      <a href="contact.html" class="btn btn-primary">Get in Touch Today</a>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Simple filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
