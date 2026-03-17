@@ -672,7 +672,7 @@ body { top: 0 !important; }
   z-index: 1;
 }
 
-.people-home-header .section-label { color: var(--mid-grey); }
+.people-home-header .section-label { color: var(--accent); }
 
 /* Fix red text on dark backgrounds globally */
 #why-us .section-label,
@@ -731,14 +731,14 @@ body { top: 0 !important; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #888888;
   display: block;
   margin-bottom: 1rem;
 }
 
-/* On dark navy backgrounds (homepage people cards), use light grey */
+/* On homepage light background, use red accent for person title */
 #people-home .person-title {
-  color: #aaaaaa;
+  color: var(--accent);
 }
 
 .person-info p { color: #555; font-size: 0.9rem; line-height: 1.7; }
